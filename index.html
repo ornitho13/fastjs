@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+
+        <title>test fastJs</title></head>
+    <body>
+        <section class="main">
+            <header id="header"></header>
+            <div class="item">test</div>
+            <div class="item">test2
+                <div class="item">
+                    <div class="test2"></div>
+                </div>
+            </div>
+            <ul class="test">
+                <li><a href="" data-request="test-data" class="link-up link"><span>plop 1</span></a></li>
+                <li><a href="" class="link no-link"><span>plop 2</span></a></li>
+                <li><a href="" class="link"><span>plop 3</span></a></li>
+            </ul>
+            <footer id="footer">
+                <span class="fer">test</span><span class="fer">test</span><span class="fer">test</span>
+            </footer>
+
+        </section>
+        <script src="dist/scripts/fastjs.full.js"></script>
+        <script>
+            $.parseJSON('{"a":"test"}');
+            var $main = $('.main'),
+                $footer = $('#footer');
+            $main.find('.link').each(function(item) {
+                console.log(item.innerHTML + ' vanilla')
+            });
+            $footer.find('.fer').each(function(item){
+                //console.log($(this));
+                //console.log(this);
+                console.log(item.innerHTML + ' vanilla')
+            });
+
+            //console.log($('.test2').closest('.main').html());
+
+            /*console.log(
+                $.inArray('str', ['str', 'est', 'ret']),
+                $.inArray('str', ['stzr', 'est', 'ret'])
+            );*/
+            let $test = $('.test');
+            //console.log($test.offset());
+            $test.addClass('pouet').addClass('truc').removeClass('pouet');
+            //console.log($test.hasClass('truc'))
+            if ($test.hasClass('truc')) {
+                $('.test.truc').addClass('machin')
+            }
+            $('.test a').attr('href', '#!');
+            $test.append('<section style="background: #900; color: #fff">append html fragment</section>');
+            $test.prepend('<section style="background: #964; color: #fff">append html fragment</section>');
+            let $noLink = $('.no-link');
+            $noLink.before('<span>lala</span>');
+            let noLink = $test.clone();
+            //console.log($(noLink).attr('class', 'new-class'));
+            //$test.append(noLink)
+            //$test.prepend(noLink);
+            $test.before(noLink);
+            //console.log(noLink.children().html('hophopohp'))
+            $('.link-up').data('request', 'plop-data');
+            /*console.log($noLink.css({
+                color : 'green',
+                background: 'yellow'
+            }).css('font-size', '2rem').css('background'));*/
+            let $liA = $('li a');
+            $liA.get(1).innerHTML = 'ciblage fait';
+            $($liA.get(2)).html('plop 3 to plop ').css('background', 'purple');
+            //console.log($($('li').get(0)).next().css({'text-transform' : 'uppercase'}));
+            //console.log($('li').parent().get(0));
+            //$('#footer').remove();
+            $('#header').replaceWith(noLink);
+            $('#footer').replaceWith('<p>it\'s a trap</p>');
+            $.ajax({
+                url : '/test.html',
+                dataType: 'html',
+                done (response) {
+                    //console.log('response :', response);
+                    $('body').append(response);
+                }
+            });
+            let i = 0;
+            $.feature('isFeature', function(){
+                return i === 0;
+            });
+            /**
+             * @var $.isFeature
+             */
+            //console.log($.isFeature);
+            $.test($.isFeature, function(){
+                //console.log('success')
+            }, function(){
+                console.log('failed')
+            });
+            let test = {
+                l:1
+            };
+            console.log(test)
+            $.extend(test, {k:3}, {c:9});
+            console.log(test);
+
+            //console.log($('.link-up').data('request'));
+            //console.log($('.test a.no-link').attr('class'));
+        </script>
+    </body>
+</html>

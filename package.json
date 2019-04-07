@@ -1,0 +1,53 @@
+{
+  "_from": "@ornitho13/fastjs",
+  "_id": "@ornitho13/fastjs@1.0.16",
+  "_inBundle": false,
+  "_integrity": "sha512-L+EAvrN+vIn1LKdLwE8KmpFLh3Suc4kdlUmexXUynq3wXF6ere8jxF6MW5voWd/8ggP0kZCBdTMJQLpP57uaDw==",
+  "_location": "/@ornitho13/fastjs",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "@ornitho13/fastjs",
+    "name": "@ornitho13/fastjs",
+    "escapedName": "@ornitho13%2ffastjs",
+    "scope": "@ornitho13",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@ornitho13/fastjs/-/fastjs-1.0.16.tgz",
+  "_shasum": "af21a3c465c159b958693698986030b66772d299",
+  "_spec": "@ornitho13/fastjs",
+  "_where": "D:\\developpement\\fastjs",
+  "author": {
+    "name": "j debray"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "a performant lightweight jQuery alternative",
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-purge-sourcemaps": "^1.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-uglify-es": "^1.0.4",
+    "gulp-util": "^3.0.8",
+    "pump": "^3.0.0"
+  },
+  "license": "ISC",
+  "main": "index.js",
+  "name": "@ornitho13/fastjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.16"
+}

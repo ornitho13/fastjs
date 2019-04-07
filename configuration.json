@@ -1,0 +1,30 @@
+{
+  "destinationFolder" : "./dist/scripts",
+  "packages" : {
+    "fastjs.full" : [
+      "./scripts/selector-core.js",
+      "./scripts/selector-dom-manipulation.js",
+      "./scripts/selector-event.js",
+      "./scripts/selector-className.js",
+      "./scripts/toolkit-core.js",
+      "./scripts/utils.js",
+      "./scripts/event.js",
+      "./scripts/ajax.js",
+      "./scripts/test-feature.js"
+    ],
+    "fastjs.selector" : [
+      "./scripts/selector-core.js",
+      "./scripts/selector-dom-manipulation.js",
+      "./scripts/selector-className.js",
+      "./scripts/selector-event.js"
+    ],
+    "fastjs.minimal" : [
+      "./scripts/selector-core.js",
+      "./scripts/selector-dom-manipulation.js",
+      "./scripts/selector-className.js",
+      "./scripts/selector-event.js",
+      "./scripts/toolkit-core.js",
+      "./scripts/test-feature.js"
+    ]
+  }
+}
